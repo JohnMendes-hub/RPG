@@ -2,18 +2,30 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="johnmendes.com.example.magiclifecounter">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MagicLifeCounter">
+        android:theme="@style/Theme.MagicLifeCounter"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".activitys.DueloActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activitys.RegrasActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activitys.BuscarCartasActivity"
+            android:exported="true" />
         <activity
             android:name=".activitys.FichasActivity"
             android:exported="true" />
         <activity
-            android:name=".activitys.ConfiguracoesActivity"
+            android:name=".activitys.WallpaperActivity"
             android:exported="true" />
         <activity
             android:name=".activitys.MainActivity"

@@ -2,33 +2,35 @@ package johnmendes.com.example.magiclifecounter.activitys;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.graphics.drawable.Drawable;
-import android.os.Build;
+import android.content.Context;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.target.SimpleTarget;
-import com.bumptech.glide.request.transition.Transition;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import johnmendes.com.example.magiclifecounter.R;
 
 public class FichasActivity extends AppCompatActivity {
 
     private LinearLayout linearLayout;
     private Spinner spinner;
-    public static String selected;
+    private int marcadorPositivo = 0, marcadorNegativo = 0;
 
+    public static String selected;
 
     int[] imagensIds = {
             R.drawable.rat,
@@ -46,6 +48,8 @@ public class FichasActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fichas);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
 
         this.setTitle("Fichas");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -55,6 +59,7 @@ public class FichasActivity extends AppCompatActivity {
         linearLayout = findViewById(R.id.LinearLayout);
 
         fichasLista();
+
     }
 
     @Override
@@ -79,6 +84,7 @@ public class FichasActivity extends AppCompatActivity {
         list.add("Pegasus");
         list.add("Vampire");
 
+//      Listando itens
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, list);
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -87,7 +93,7 @@ public class FichasActivity extends AppCompatActivity {
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinner.setAdapter(dataAdapter);
-
+//       Selecionando itens
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
@@ -127,7 +133,7 @@ public class FichasActivity extends AppCompatActivity {
                 Log.e("SELECIONADO", selected);
 
                 try {
-                    //Your task here
+
                 }catch (Exception e)
                 {
                     e.printStackTrace();
@@ -142,6 +148,5 @@ public class FichasActivity extends AppCompatActivity {
 
 
     }
-
 
 }

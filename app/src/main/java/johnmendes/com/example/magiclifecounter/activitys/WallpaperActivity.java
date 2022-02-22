@@ -12,8 +12,7 @@ import android.widget.ImageView;
 
 import johnmendes.com.example.magiclifecounter.R;
 
-
-public class ConfiguracoesActivity extends AppCompatActivity {
+public class WallpaperActivity extends AppCompatActivity {
 
     private ImageButton rightButton, leftButton;
     private Button wallpaperButton;
@@ -29,9 +28,28 @@ public class ConfiguracoesActivity extends AppCompatActivity {
             R.drawable.background6,
             R.drawable.background7,
             R.drawable.background8,
+            R.drawable.background9,
             R.drawable.background10,
             R.drawable.background11,
             R.drawable.background12,
+            R.drawable.background13,
+            R.drawable.background14,
+            R.drawable.background15,
+            R.drawable.background16,
+            R.drawable.background17,
+            R.drawable.background18,
+            R.drawable.background19,
+            R.drawable.background20,
+            R.drawable.background21,
+            R.drawable.background22,
+            R.drawable.background23,
+            R.drawable.background24,
+            R.drawable.background25,
+            R.drawable.background26,
+            R.drawable.background27,
+            R.drawable.background28,
+            R.drawable.background29,
+            R.drawable.background30,
 
     };
 
@@ -40,8 +58,7 @@ public class ConfiguracoesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        setContentView(R.layout.activity_configuracoes);
+        setContentView(R.layout.activity_wallpaper);
         this.setTitle("Configurações");
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -57,7 +74,6 @@ public class ConfiguracoesActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 nextImage();
-
             }
         });
 
@@ -73,9 +89,9 @@ public class ConfiguracoesActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(ConfiguracoesActivity.this, MainActivity.class); intent.putExtra("image", imagensIds[i]);
+                Intent intent = new Intent(WallpaperActivity.this, MainActivity.class);
+                intent.putExtra("image", imagensIds[i]);
                 startActivity(intent);
-
             }
         });
 
@@ -96,25 +112,22 @@ public class ConfiguracoesActivity extends AppCompatActivity {
         wallpaperImg.setImageResource(imagensIds[i]);
         leftButton.setVisibility(View.VISIBLE);
 
-        if(i > 10){
-            i = 10;
-            wallpaperImg.setImageResource(imagensIds[11]);
+        if( i == 30){
 
+            rightButton.setVisibility(View.GONE);
         }
-
     }
 
     public void previousImage(){
 
         i--;
         wallpaperImg.setImageResource(imagensIds[i]);
+        rightButton.setVisibility(View.VISIBLE);
 
-        if(i == -1 | i == 0){
+        if(i == 0){
 
             leftButton.setVisibility(View.GONE);
-
         }
-
     }
 
 }

@@ -11,9 +11,11 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 
 import johnmendes.com.example.magiclifecounter.R;
 
@@ -27,8 +29,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
-        setContentView(R.layout.activity_main);
         LinearLayout linearLayout = (LinearLayout) findViewById(R.id.background);
         int image = getIntent().getIntExtra("image",R.drawable.background0);
         linearLayout.setBackgroundResource(image);
@@ -51,8 +53,9 @@ public class MainActivity extends AppCompatActivity {
                 if (lifeCount == 0){
 
                     AlertDialog.Builder alertLife = new AlertDialog.Builder(MainActivity.this);
+                    alertLife.setIcon(R.drawable.sad);
                     alertLife.setTitle("Você Perdeu!").setCancelable(false)
-                            .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            .setPositiveButton("Novo Jogo", new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int id) {
 
                                     refresh();
@@ -77,7 +80,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
     }
 
     @Override
@@ -90,13 +92,21 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
-        switch ( item.getItemId() ){//Abrir Configurações
-            case R.id.menuConfiguracoes:
+        switch ( item.getItemId() ){
+            case R.id.menuWallpaper:
                 abrirConfiguracoes();
-
                 break;
             case R.id.menuFichas:
                 abrirFichas();
+                break;
+            case R.id.menuCartas:
+                abrirBuscarCartas();
+                break;
+            case R.id.menuRegras:
+                abrirRegras();
+                break;
+            case R.id.menuDuelo:
+                abrirDuelo();
                 break;
         }
 
@@ -104,14 +114,31 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void abrirConfiguracoes(){
-        Intent intent = new Intent(MainActivity.this, ConfiguracoesActivity.class);
+        Intent intent = new Intent(MainActivity.this, WallpaperActivity.class);
         startActivity( intent );
     }
-
 
     public void abrirFichas() {
 
         Intent intent = new Intent(MainActivity.this, FichasActivity.class);
+        startActivity(intent);
+    }
+
+    public void abrirBuscarCartas(){
+
+        Intent intent = new Intent(MainActivity.this, BuscarCartasActivity.class);
+        startActivity(intent);
+    }
+
+    public void abrirRegras(){
+
+        Intent intent = new Intent(MainActivity.this, RegrasActivity.class);
+        startActivity(intent);
+    }
+
+    public void abrirDuelo(){
+
+        Intent intent = new Intent(MainActivity.this, DueloActivity.class);
         startActivity(intent);
     }
 
