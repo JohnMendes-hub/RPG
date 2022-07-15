@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/margem_padrao"
+    tools:context=".activitys.classes.ClassesActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SELECIONE UMA CLASSE"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnBarbaro"
+            android:layout_width="@dimen/tamanho_button"
+            android:layout_height="@dimen/tamanho_button"
+            android:layout_marginTop="8dp"
+            android:drawableTop="@drawable/barbaro"
+            android:text="@string/barbaro"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@+id/btnBruxo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <Button
+            android:id="@+id/btnBruxo"
+            android:layout_width="@dimen/tamanho_button"
+            android:layout_height="@dimen/tamanho_button"
+            android:layout_marginTop="8dp"
+            android:drawableTop="@drawable/bruxo"
+            android:text="@string/bruxo"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnBarbaro"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <Button
+            android:id="@+id/btnDruida"
+            android:layout_width="@dimen/tamanho_button"
+            android:layout_height="@dimen/tamanho_button"
+            android:drawableTop="@drawable/druida"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="@string/druida"
+            app:layout_constraintEnd_toStartOf="@+id/btnFeiticeiro"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnBarbaro" />
+
+        <Button
+            android:id="@+id/btnFeiticeiro"
+            android:layout_width="@dimen/tamanho_button"
+            android:layout_height="@dimen/tamanho_button"
+            android:drawableTop="@drawable/alquimia"
+            android:text="@string/feiticeiro"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnDruida"
+            app:layout_constraintTop_toBottomOf="@+id/btnBruxo" />
+
+        <Button
+            android:id="@+id/btnGuerreiro"
+            android:layout_width="@dimen/tamanho_button"
+            android:layout_height="@dimen/tamanho_button"
+            android:drawableTop="@drawable/espadachim"
+            android:text="@string/guerreiro"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@+id/btnLadino"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnDruida" />
+
+        <Button
+            android:id="@+id/btnLadino"
+            android:layout_width="@dimen/tamanho_button"
+            android:layout_height="@dimen/tamanho_button"
+            android:drawableTop="@drawable/ladrao"
+            android:text="@string/ladino"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnGuerreiro"
+            app:layout_constraintTop_toBottomOf="@+id/btnFeiticeiro"/>
+
+        <Button
+            android:id="@+id/btnMago"
+            android:layout_width="@dimen/tamanho_button"
+            android:layout_height="@dimen/tamanho_button"
+            android:drawableTop="@drawable/magico"
+            android:text="@string/mago"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@+id/btnMonge"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnGuerreiro"/>
+
+        <Button
+            android:id="@+id/btnMonge"
+            android:layout_width="@dimen/tamanho_button"
+            android:layout_height="@dimen/tamanho_button"
+            android:drawableTop="@drawable/monge"
+            android:text="@string/monge"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnMago"
+            app:layout_constraintTop_toBottomOf="@+id/btnLadino" />
+
+        <Button
+            android:id="@+id/btnRanger"
+            android:layout_width="@dimen/tamanho_button"
+            android:layout_height="@dimen/tamanho_button"
+            android:drawableTop="@drawable/arco"
+            android:text="@string/ranger"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnPaladino"
+            app:layout_constraintTop_toBottomOf="@+id/btnMonge" />
+
+        <Button
+            android:id="@+id/btnPaladino"
+            android:layout_width="@dimen/tamanho_button"
+            android:layout_height="@dimen/tamanho_button"
+            android:drawableTop="@drawable/cavaleiro"
+            android:text="@string/paladino"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@+id/btnRanger"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnMago" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

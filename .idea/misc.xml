@@ -3,6 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/john.mendes/Documents/AplicationsDemo/Demos Desenvolvimento/MagicLifeCounter/app/src/main/res/layout/activity_buscar_cartas.xml" value="0.3645833333333333" />
+        <entry key="..\:/Users/john.mendes/Documents/AplicationsDemo/Demos Desenvolvimento/MagicLifeCounter/app/src/main/res/layout/activity_regras.xml" value="0.254981884057971" />
+        <entry key="..\:/Users/john.mendes/Documents/AplicationsDemo/Demos Desenvolvimento/RPG/app/src/main/res/layout/activity_classe_selecionada.xml" value="0.19067028985507245" />
+        <entry key="..\:/Users/john.mendes/Documents/AplicationsDemo/Demos Desenvolvimento/RPG/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/john.mendes/Documents/AplicationsDemo/Demos Desenvolvimento/RPG/app/src/main/res/layout/activity_mestre.xml" value="0.3645833333333333" />
+        <entry key="..\:/Users/john.mendes/Documents/AplicationsDemo/Demos Desenvolvimento/RPG/app/src/main/res/layout/activity_monsters.xml" value="0.35260416666666666" />
+        <entry key="..\:/Users/john.mendes/Documents/AplicationsDemo/Demos Desenvolvimento/RPG/app/src/main/res/layout/activity_pdf.xml" value="0.3645833333333333" />
+        <entry key="..\:/Users/john.mendes/Documents/AplicationsDemo/Demos Desenvolvimento/RPG/app/src/main/res/layout/fragment_p_d_f.xml" value="0.17831813576494426" />
+        <entry key="..\:/Users/john.mendes/Documents/AplicationsDemo/Demos Desenvolvimento/RPG/app/src/main/res/layout/toolbar.xml" value="0.19067028985507245" />
         <entry key="..\:/Users/john.mendes/Downloads/MagicLifeCounter/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
         <entry key="..\:/Users/john.mendes/Downloads/MagicLifeCounter/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.1" />
         <entry key="..\:/Users/john.mendes/Downloads/MagicLifeCounter/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.1" />

@@ -2,69 +2,97 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/RefreshBtt"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="@dimen/margem_padrao"
     tools:context=".activitys.MainActivity">
 
-    <LinearLayout android:id="@+id/background"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:background="@drawable/background0">
-    </LinearLayout>
-
     <TextView
-        android:id="@+id/LifeCounter"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:gravity="center"
-        android:text="20"
-        android:textColor="#FFFFFF"
-        android:textSize="96sp"
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/rgp_guide"
+        android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
-        android:id="@+id/refreshBtt"
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_weight="1"
-        android:background="@android:color/transparent"
+        android:layout_margin="@dimen/margem_padrao"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LifeCounter"
-        app:srcCompat="@drawable/refresh" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
 
-    <ImageButton
-        android:id="@+id/UpBtt"
+        <Button
+            android:id="@+id/btnMestre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableTop="@drawable/mestre"
+            android:text="@string/mestre"
+            android:textStyle="bold"/>
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="50dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btnMonstros"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableTop="@drawable/monstros"
+            android:text="@string/monstros"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
-        android:background="@android:color/transparent"
-        app:layout_constraintEnd_toStartOf="@+id/LifeCounter"
-        app:layout_constraintTop_toTopOf="@+id/LifeCounter"
-        app:srcCompat="@drawable/up"
-        tools:ignore="SpeakableTextPresentCheck" />
+        android:layout_margin="@dimen/margem_padrao"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.00999999">
+
+        <Button
+            android:id="@+id/btnJogador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/jogador"
+            android:text="jogador"
+            tools:layout_editor_absoluteX="185dp"
+            tools:layout_editor_absoluteY="460dp"
+            android:textStyle="bold"/>
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="50dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btnClasses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/classes"
+            android:text="@string/classes"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="460dp"
+            android:textStyle="bold"/>
 
 
-    <ImageButton
-        android:id="@+id/DownBtt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:background="@android:color/transparent"
-        app:layout_constraintStart_toEndOf="@+id/LifeCounter"
-        app:layout_constraintTop_toTopOf="@+id/LifeCounter"
-        app:srcCompat="@drawable/down"
-        tools:ignore="SpeakableTextPresentCheck" />
-
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

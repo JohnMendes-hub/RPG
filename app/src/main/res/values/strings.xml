@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MagicHP</string>
+    <string name="app_name">RPG</string>
     <string name="title_activity_menu">MenuActivity</string>
     <string name="title_wallpaper">Alterar Wallpapers</string>
     <string name="title_dashboard">Dashboard</string>
@@ -10,6 +10,23 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+
+    <string name="barbaro">Bárbaro</string>
+    <string name="bruxo">Bruxo</string>
+    <string name="druida">Druida</string>
+    <string name="feiticeiro">feiticeiro</string>
+    <string name="guerreiro">guerreiro</string>
+    <string name="ladino">ladino</string>
+    <string name="mago">mago</string>
+    <string name="monge">monge</string>
+    <string name="ranger">ranger</string>
+    <string name="paladino">paladino</string>
+    <string name="monstros">monstros</string>
+    <string name="mestre">mestre</string>
+    <string name="rgp_guide">RGP Guide</string>
+    <string name="classes">classes</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
