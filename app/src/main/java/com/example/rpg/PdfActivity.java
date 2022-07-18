@@ -169,7 +169,7 @@ public class PdfActivity extends AppCompatActivity {
         if (roll == 20){
 
             Toast.makeText(getApplicationContext(), "BOA VOCÊ CRITOU " +
-                    roll, Toast.LENGTH_LONG).show();
+                    roll + "!", Toast.LENGTH_LONG).show();
 
         }if(roll == 1){
 
