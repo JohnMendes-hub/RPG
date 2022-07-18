@@ -5,31 +5,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="@dimen/margem_padrao"
-    tools:context=".activitys.MainActivity">
+    tools:context="com.example.rpg.MainActivity">
 
-    <TextView
-        android:id="@+id/textView2"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/rgp_guide"
-        android:textSize="24sp"
-        android:textStyle="bold"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margem_padrao"
         android:gravity="center_horizontal"
         android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.100000024">
 
         <Button
             android:id="@+id/btnMestre"
@@ -38,7 +38,7 @@
             android:layout_gravity="center"
             android:drawableTop="@drawable/mestre"
             android:text="@string/mestre"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <View
             android:layout_width="10dp"
@@ -52,20 +52,20 @@
             android:layout_gravity="center"
             android:drawableTop="@drawable/monstros"
             android:text="@string/monstros"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margem_padrao"
         android:gravity="center_horizontal"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.00999999">
+        app:layout_constraintVertical_bias="0.0">
 
         <Button
             android:id="@+id/btnJogador"
@@ -73,9 +73,9 @@
             android:layout_height="wrap_content"
             android:drawableTop="@drawable/jogador"
             android:text="jogador"
+            android:textStyle="bold"
             tools:layout_editor_absoluteX="185dp"
-            tools:layout_editor_absoluteY="460dp"
-            android:textStyle="bold"/>
+            tools:layout_editor_absoluteY="460dp" />
 
         <View
             android:layout_width="10dp"
@@ -88,11 +88,29 @@
             android:layout_height="wrap_content"
             android:drawableTop="@drawable/classes"
             android:text="@string/classes"
+            android:textStyle="bold"
             tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="460dp"
-            android:textStyle="bold"/>
+            tools:layout_editor_absoluteY="460dp" />
 
 
     </LinearLayout>
+
+        <Button
+            android:id="@+id/btnXanathar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/beholder"
+            android:text="@string/xanathar_s_guide"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+    </LinearLayout>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

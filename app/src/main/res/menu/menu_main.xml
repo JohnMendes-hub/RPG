@@ -2,27 +2,22 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item android:id="@+id/menuWallpaper"
-        android:title="Wallpapers"
-        app:showAsAction="never"
-        />
-    <item android:id="@+id/menuFichas"
-        android:title="Fichas"
-        app:showAsAction="never"
-        />
+    <item
+        android:id="@+id/rollDice"
+        android:icon="@drawable/d20"
+        android:title="@string/roll"
+        app:showAsAction="always">
 
-    <item android:id="@+id/menuRegras"
-        android:title="Regras"
-        app:showAsAction="never"
-        />
-    <item android:id="@+id/menuCartas"
-        android:title="Buscar Cartas"
-        app:showAsAction="never"
-        />
-    <item android:id="@+id/menuDuelo"
-        android:title="Modo Duelo"
-        app:showAsAction="never"
-        />
+        <menu>
+            <item
+                android:id="@+id/roll"
+                android:icon="@drawable/d20"
+                android:title="@string/rolar_d20"
+                app:showAsAction="always" />
+        </menu>
+
+    </item>
+
 
 
 </menu>
