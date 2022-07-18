@@ -168,13 +168,13 @@ public class PdfActivity extends AppCompatActivity {
 
         if (roll == 20){
 
-            Toast.makeText(getApplicationContext(), "BOA VOCÊ CRITOU 20! " +
+            Toast.makeText(getApplicationContext(), "BOA VOCÊ CRITOU " +
                     roll, Toast.LENGTH_LONG).show();
 
         }if(roll == 1){
 
-            Toast.makeText(getApplicationContext(), "Que triste, critou 1! " +
-                    roll, Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Que triste, critou " +
+                    roll + "!", Toast.LENGTH_LONG).show();
         }
 
     }
